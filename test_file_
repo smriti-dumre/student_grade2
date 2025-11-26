@@ -1,0 +1,35 @@
+# -------------------------------------------------
+# SGMS Qt GUI Project (.pro file)
+# -------------------------------------------------
+
+QT += core gui widgets
+
+CONFIG += c++17 console
+CONFIG -= app_bundle
+
+# If using Qt 6, add this (Qt5 ignores it safely):
+greaterThan(QT_MAJOR_VERSION, 5): QT += widgets
+
+TARGET = SGMS
+TEMPLATE = app
+
+SOURCES += \
+    main.cpp \
+    MainWindow.cpp \
+    Student.cpp \
+    AVLTree.cpp \
+    AVLNode.cpp \
+    CSVHelper.cpp
+
+HEADERS += \
+    MainWindow.h \
+    Student.h \
+    AVLTree.h \
+    AVLNode.h \
+    CSVHelper.h
+
+# (Optional) UI files if you ever add .ui forms:
+# FORMS += MainWindow.ui
+
+# Enable automatic MOC processing
+CONFIG += moc
